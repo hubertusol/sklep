@@ -1,0 +1,40 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    padding:0;
+    margin: 0;
+}
+header {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    background-color: blue;
+}
+nav {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    background-color: aquamarine;
+}
+main {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2000px;
+    width: 50%;
+    border: 2px solid gray;
+}
+.logo {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 2px solid gray;
+    width: fit-content;
+    font-size: 64px;
+    font-weight: bolder;
+}
+.searchspace {
+    tex
+    line-height: 100%;
+    border-right: 2px solid gray;
+    width: 18%;
+
+}
