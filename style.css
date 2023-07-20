@@ -4,16 +4,11 @@ body {
     margin: 0;
 }
 header {
+    position: fixed;
     display: flex;
     width: 100%;
     height: 75px;
     background-color: blue;
-}
-nav {
-    display: flex;
-    width: 100%;
-    height: 75px;
-    background-color: aquamarine;
 }
 main {
     text-align: center;
@@ -32,9 +27,29 @@ main {
     font-weight: bolder;
 }
 .searchspace {
-    tex
-    line-height: 100%;
+    position: relative;
     border-right: 2px solid gray;
     width: 18%;
 
 }
+input {
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav {
+    display: flex;;
+    width: 60%;
+    border-right: 2px solid gray;
+}
+.link {
+    width: 20%;
+    border-right: 2px solid black;
+}
+.scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+  }
