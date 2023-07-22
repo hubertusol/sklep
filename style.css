@@ -7,7 +7,7 @@ header {
     position: fixed;
     display: flex;
     width: 100%;
-    height: 75px;
+    height: 55px;
     background-color: blue;
 }
 main {
@@ -23,16 +23,18 @@ main {
     padding-right: 15px;
     border-right: 2px solid gray;
     width: fit-content;
-    font-size: 64px;
+    font-size: 54px;
     font-weight: bolder;
 }
 .searchspace {
     position: relative;
     border-right: 2px solid gray;
-    width: 18%;
+    width: 38%;
 
 }
 input {
+    width: 90%;
+    margin-left: 20px;
     margin: 0;
   position: absolute;
   top: 50%;
@@ -44,7 +46,6 @@ nav {
     border-right: 2px solid gray;
 }
 .link {
-    width: 20%;
     border-right: 2px solid black;
 }
 .scrolled-down{
