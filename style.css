@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(202deg, rgba(239,251,250,1) 50%, rgba(255,255,255,1) 100%);
+ /* background: linear-gradient(202deg, rgba(239,251,250,1) 50%, rgba(255,255,255,1) 100%);*/
     font-family:Arial, Helvetica, sans-serif;
     padding:0;
     margin: 0;
@@ -10,7 +10,15 @@ header {
     display: flex;
     width: 100%;
     height: 55px;
-    background-color: #a39e92;
+}
+footer {
+  width: 100%;
+  background: linear-gradient(202deg, rgba(57,118,212,1) 80%, rgba(30,161,163,1) 100%);
+  height: 55px;
+  text-align: center;
+  line-height: 100%;
+  font-weight: bold;
+  font-size: 36px;
 }
 .koszyk {
     width: 60px;
@@ -20,9 +28,8 @@ main {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    height: 2000px;
-    width: 50%;
-    border: 2px solid gray;
+    width: 70%;
+    height: 1200px;
 }
 .logo {
     margin-right: 20px;
@@ -78,4 +85,47 @@ nav {
     margin: 0;
     position: absolute;
     transform: translateY(25%);
+  }
+  .banner {
+    color: darkgrey;
+    line-height: 250px;
+    background-color: #cceeff;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  .productslider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    width: calc(100% - 20px);
+    height: 250px;
+
+  }
+  .productcard {
+    width: 17%;
+    height: 246px;
+    padding: 2px;
+  }
+  .slidercontent {
+    justify-content:space-between;
+    display: flex;
+  }
+  .productimage {
+    width: 100%;
+    height: auto;
+  }
+  .cardtext {
+    margin-top: 10px;
+    text-align: left;
+  }
+  .cardprice {
+    line-height: 40%;
+    font-size: 26px;
+    color: red;
+    font-weight:bold;
+  }
+  .carddesc {
+    line-height: 30%;
   }
