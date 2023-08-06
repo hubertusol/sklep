@@ -38,47 +38,31 @@
                    $sql = "SELECT nazwa,price,thumbnail FROM produkty;";
                    $result = mysqli_query($conn,$sql);
                    $row = mysqli_fetch_array($result);
+                   for ($i=0;$i<=5;$i++) {
                    echo '
                     <div class="productcard">
                     <img src="img/'.$row[2].'" class="productimage">
                     <div class="cardtext">
                         <p class="cardprice">'.$row[1].'$</p>
                         <p class="carddesc">'.$row[0].'</p>
-                    </div>
-                    ';
+                    </div></div>
+                    ';}
                    mysqli_close($conn);
                    ?>
-                        <div class="productcard">
-
-                        </div>
-                        <div class="productcard">
-
-                        </div>
-                        <div class="productcard">
-
-                        </div>
-                        <div class="productcard">
-
-                    </div>
-                    </div>
-                </div>
+                </div></div>
                 <div class="productslider">
                     <div class="slidercontent">
-                        <div class="productcard">
-
-                        </div>
-                        <div class="productcard">
-
-                        </div>
-                        <div class="productcard">
-
-                        </div>
-                        <div class="productcard">
-
-                        </div>
-                        <div class="productcard">
-
-                    </div>
+                        <?php 
+                        for ($i=0;$i<=5;$i++) {
+                            echo '
+                             <div class="productcard">
+                             <img src="img/'.$row[2].'" class="productimage">
+                             <div class="cardtext">
+                                 <p class="cardprice">'.$row[1].'$</p>
+                                 <p class="carddesc">'.$row[0].'</p>
+                             </div></div>
+                             ';}
+                        ?>
                     </div>
                 </div>
             </main>
