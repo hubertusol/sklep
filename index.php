@@ -37,8 +37,7 @@
                    $conn= mysqli_connect("localhost:3306","root", "", "myshop");
                    $sql = "SELECT nazwa,price,thumbnail FROM produkty;";
                    $result = mysqli_query($conn,$sql);
-                   $row = mysqli_fetch_array($result);
-                   for ($i=0;$i<=5;$i++) {
+                   while($row = mysqli_fetch_array($result)) {
                    echo '
                     <div class="productcard">
                     <img src="img/'.$row[2].'" class="productimage">
@@ -52,17 +51,7 @@
                 </div></div>
                 <div class="productslider">
                     <div class="slidercontent">
-                        <?php 
-                        for ($i=0;$i<=5;$i++) {
-                            echo '
-                             <div class="productcard">
-                             <img src="img/'.$row[2].'" class="productimage">
-                             <div class="cardtext">
-                                 <p class="cardprice">'.$row[1].'$</p>
-                                 <p class="carddesc">'.$row[0].'</p>
-                             </div></div>
-                             ';}
-                        ?>
+                        
                     </div>
                 </div>
             </main>

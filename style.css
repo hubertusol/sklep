@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 header {
-    background: linear-gradient(202deg, rgba(57,118,212,1) 80%, rgba(30,161,163,1) 100%);
+  background: linear-gradient(202deg, rgba(57,118,212,1) 80%, rgba(30,161,163,1) 100%);
     position: fixed;
     display: flex;
     width: 100%;
@@ -116,18 +116,18 @@ nav {
   }
   .productimage {
     width: 100%;
-    height: auto;
+    height: 150px;
   }
   .cardtext {
-    margin-top: 10px;
     text-align: left;
   }
   .cardprice {
-    line-height: 40%;
+    margin:0;
+    line-height: 100%;
     font-size: 26px;
     color: red;
     font-weight:bold;
   }
   .carddesc {
-    line-height: 30%;
+    line-height: 100%;
   }
