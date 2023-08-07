@@ -35,14 +35,17 @@
                    <div class="slidercontent">
                    <?php 
                    $conn= mysqli_connect("localhost:3306","root", "", "myshop");
-                   $sql = "SELECT nazwa,price,thumbnail FROM produkty;";
+                   $sql = "SELECT nazwa,price,thumbnail,price_old,special_offer FROM produkty;";
                    $result = mysqli_query($conn,$sql);
                    while($row = mysqli_fetch_array($result)) {
+                    $discounted = null;
+                    if ($row[4]==1) {$discounted=$row[3];}
                    echo '
                     <div class="productcard">
                     <img src="img/'.$row[2].'" class="productimage">
                     <div class="cardtext">
                         <p class="cardprice">'.$row[1].'$</p>
+                        <p class="oldprice">'.$discounted.'</p>
                         <p class="carddesc">'.$row[0].'</p>
                     </div></div>
                     ';}

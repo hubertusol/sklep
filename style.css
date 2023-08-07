@@ -131,3 +131,7 @@ nav {
   .carddesc {
     line-height: 100%;
   }
+  .oldprice {
+    text-decoration:line-through;
+    line-height: 50%;
+  }
