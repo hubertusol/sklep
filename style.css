@@ -135,3 +135,45 @@ nav {
     text-decoration:line-through;
     line-height: 50%;
   }
+  .shoppage {
+    justify-content: space-between;
+    display:flex;
+    width: 100%;
+    height:900px;;
+  }
+  .shopimage{
+    width:75%;
+  }
+  .shopproduct {
+    width: 60%;
+    border: 2px solid gray;
+  }
+  .shopinfo {
+    border: 2px solid gray;
+    width: 35%;
+  }
+  .reviews {
+    font-size: 34px;
+    border-bottom: 2px solid grey;
+  }
+  .shopprice {
+    font-weight: bolder;
+    color: red;
+    font-size: 44px;
+  }
+  .shoppurchase {
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 24px;
+    background-color: rgba(57,118,212,1);
+    width:70%;
+    border: none;
+  }
+  .shoppurchase:hover {
+    background-color: rgba(30,161,163,1);
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }

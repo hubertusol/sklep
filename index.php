@@ -35,21 +35,22 @@
                    <div class="slidercontent">
                    <?php 
                    $conn= mysqli_connect("localhost:3306","root", "", "myshop");
-                   $sql = "SELECT nazwa,price,thumbnail,price_old,special_offer FROM produkty;";
+                   $sql = "SELECT nazwa,price,thumbnail,price_old,special_offer,product_url FROM produkty;";
                    $result = mysqli_query($conn,$sql);
-                   while($row = mysqli_fetch_array($result)) {
-                    $discounted = null;
-                    if ($row[4]==1) {$discounted=$row[3];}
+                   while($row = mysqli_fetch_array($result)) {               
                    echo '
                     <div class="productcard">
-                    <img src="img/'.$row[2].'" class="productimage">
+                    <a href="item.php?product='.$row['product_url'].'">
+                    <img src="img/'.$row['thumbnail'].'" class="productimage">
                     <div class="cardtext">
-                        <p class="cardprice">'.$row[1].'$</p>
-                        <p class="oldprice">'.$discounted.'</p>
-                        <p class="carddesc">'.$row[0].'</p>
-                    </div></div>
+                        <p class="cardprice">'.$row['price'].'$</p>';
+                       if($row['special_offer']==1) {echo '<p class="oldprice">'.$row['price_old'].'$</p>';}
+                       else {echo'<br>';}
+                       echo '<p class="carddesc">'.$row['nazwa'].'</p>
+                    </div></a></div>
+                    
                     ';}
-                   mysqli_close($conn);
+                    mysqli_close($conn);
                    ?>
                 </div></div>
                 <div class="productslider">
