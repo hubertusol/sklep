@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>SKLEP</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="shopstyle.css">
         
     </head>
     <body>
@@ -39,24 +40,26 @@
                             <p class="breadcrumbs"><a href="index.php" class="highlight">LOGO sklep</a> > '.$row['kategoria'].' > '.$row['nazwa'].'</p>
                                 <div class="shoppage">
                                     <div class="shopproduct">
-                                    <h1 class="shopname">'.$row['nazwa'].'</h1>
+                                    
                                     <img src="img/'.$row['thumbnail'].'" class="shopimage">
                                     
                                     </div>
                                     <div class="shopinfo">
-                                    <p class="reviews"> &#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                                    <h2 class="shopname">'.$row['nazwa'].'</h2>
-                                        <p class="shopprice">'.$row['price'].'$</p>';
+                                    
+                                    <p class="shopname">'.$row['nazwa'].'</p>
+                                    <p class="reviews"> 5.0 <b style="color: orange; text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);">&#9733;</b>
+                                    <span class="howmany">213 recenzji</span>
+                                    </p>
+                                        <p class="shopprice">'.$row['price'].'$';
                                         if ($row['special_offer']==1) {
-                                        echo '<p class="shopdiscount">'.$row['price_old'].'$</p>';
+                                            $discounted = round(100-($row['price']/$row['price_old'])*100);
+                                             echo '<span class="shopdiscount"><s>'.$row['price_old'].'</s>$ -'.$discounted.'%</span>';
                                         }
-                                        else {
-                                        echo '<br>';
-                                        }
+                                        echo'</p>';
+                                    
                                         echo '
                                         <div class="shopbuttons">
-                                        <button class="shoppurchase">Kup teraz</button></br></br>
-                                        <button class="shoppurchase">Dodaj do koszyka</button> 
+                                             <button class="shoppurchase">Kup teraz</button></br></br>
                                         </div>
                                     </div>
                                 </div>

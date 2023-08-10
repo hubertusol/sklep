@@ -44,7 +44,9 @@
                     <img src="img/'.$row['thumbnail'].'" class="productimage">
                     <div class="cardtext">
                         <p class="cardprice">'.$row['price'].'$</p>';
-                       if($row['special_offer']==1) {echo '<p class="oldprice">'.$row['price_old'].'$</p>';}
+                       if($row['special_offer']==1) {
+                        $discounted = round(100-($row['price']/$row['price_old'])*100);
+                        echo '<p class="oldprice"><s>'.$row['price_old'].'</s>$ -'.$discounted.'%</p>';}
                        else {echo'<br>';}
                        echo '<p class="carddesc">'.$row['nazwa'].'</p>
                     </div></a></div>

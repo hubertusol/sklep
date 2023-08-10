@@ -1,0 +1,83 @@
+.shoppage {
+    justify-content: space-between;
+    display:flex;
+    width: 100%;
+    height:900px;;
+  }
+  .shopimage{
+    width:75%;
+  }
+  .shopproduct {
+    padding-top:40px;
+    border-radius: 40px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 83%, rgba(230,234,237,1) 100%);
+    width: 60%;
+  }
+  .shopinfo {
+    text-align: left;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 83%, rgba(230,234,237,1) 100%);
+    width: 35%;
+  }
+  .reviews {
+    font-weight: bold;
+    margin: 10px;
+    margin-left: 20px;
+    font-size: 28px;
+  }
+  .howmany {
+    color:darkgray;
+    font-style: italic;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .shopname {
+    margin: 20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .shopprice {
+    padding-bottom: 20px;
+    border-bottom: 2px solid lightgray;
+    margin: 20px;
+    font-weight: bolder;
+    color: red;
+    font-size: 44px;
+  }
+  .shoppurchase {
+    height: 50px;;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: rgba(57,118,212,1);
+    width:90%;
+    border: none;
+  }
+  .shoppurchase:hover {
+    background-color: rgba(30,161,163,1);
+    cursor: pointer;
+  }
+ 
+  .shopdiscount {
+    margin-left: 10px;
+    font-size:  18px;
+    font-style: italic;
+    color: darkgrey;
+  }
+  .highlight:hover{
+    color: rgba(57,118,212,1);
+  }
+  .discountpercent{
+    background-color: aqua;
+  }
+  .shopbuttons {
+
+    text-align: center;
+  }
+  .badge {
+    margin-left: 20px;
+    margin:10px;
+    height: 95px;
+  }
