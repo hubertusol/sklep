@@ -11,7 +11,7 @@
             
             <header class="autohide">
                 <div class="logo">
-                    LOGO
+                <a href="index.php">LOGO</a>
                 </div>
                 <div class="searchspace">
                     <div class="vertcenter">
@@ -39,7 +39,7 @@
                    $result = mysqli_query($conn,$sql);
                    while($row = mysqli_fetch_array($result)) {               
                    echo '
-                    <div class="productcard">
+                    <div class="productcard" onmouseover="lightUp(this)" onmouseout="lightDown(this)">
                     <a href="item.php?product='.$row['product_url'].'">
                     <img src="img/'.$row['thumbnail'].'" class="productimage">
                     <div class="cardtext">
@@ -64,6 +64,15 @@
             </footer>
         </div>
     </body>
+    <script>
+        function lightUp(x) {
+            x.style.color = "rgba(57,118,212,1)";
+        }
+        function lightDown(x) {
+            x.style.color = "black";
+        }
+
+    </script>
     <script src="script.js"></script>
     
 </html>

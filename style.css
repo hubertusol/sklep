@@ -98,10 +98,8 @@ nav {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #f2f2f2;
     width: calc(100% - 20px);
     height: 250px;
-
   }
   .productcard {
     width: 17%;
@@ -132,6 +130,8 @@ nav {
     line-height: 100%;
   }
   .oldprice {
+    font-style: italic;
+    color: darkgrey;
     text-decoration:line-through;
     line-height: 50%;
   }
@@ -176,4 +176,12 @@ nav {
   a {
     text-decoration: none;
     color: inherit;
+  }
+  .shopdiscount {
+    font-style: italic;
+    color: darkgrey;
+    text-decoration: line-through;
+  }
+  .highlight:hover{
+    color: rgba(57,118,212,1);
   }

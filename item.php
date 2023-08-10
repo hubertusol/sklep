@@ -36,7 +36,7 @@
                         $result = mysqli_query($conn,$sql);
                         $row = mysqli_fetch_array($result);
                         echo '
-                            <p class="breadcrumbs">'.$row['kategoria'].' > '.$row['nazwa'].'</p>
+                            <p class="breadcrumbs"><a href="index.php" class="highlight">LOGO sklep</a> > '.$row['kategoria'].' > '.$row['nazwa'].'</p>
                                 <div class="shoppage">
                                     <div class="shopproduct">
                                     <h1 class="shopname">'.$row['nazwa'].'</h1>
@@ -46,9 +46,9 @@
                                     <div class="shopinfo">
                                     <p class="reviews"> &#9733;&#9733;&#9733;&#9733;&#9733;</p>
                                     <h2 class="shopname">'.$row['nazwa'].'</h2>
-                                        <p class="shopprice">'.$row['price'].'</p>';
+                                        <p class="shopprice">'.$row['price'].'$</p>';
                                         if ($row['special_offer']==1) {
-                                        echo '<p class="shopdiscount">'.$row['price_old'].'</p>';
+                                        echo '<p class="shopdiscount">'.$row['price_old'].'$</p>';
                                         }
                                         else {
                                         echo '<br>';
@@ -68,6 +68,7 @@
             </footer>
         </div>
     </body>
+    
     <script src="script.js"></script>
     
 </html>
