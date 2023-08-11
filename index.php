@@ -37,7 +37,7 @@
                 <div class="slidercontent">
                     <?php 
                    $conn= mysqli_connect("localhost:3306","root", "", "myshop");
-                   $sql = "SELECT nazwa,price,thumbnail,price_old,special_offer,product_url FROM produkty;";
+                   $sql = "SELECT nazwa,price,thumbnail,price_old,special_offer,product_url FROM produkty  WHERE kategoria = 'elektronika';";
                    $result = mysqli_query($conn,$sql);
                    while($row = mysqli_fetch_array($result)) {               
                    echo '
@@ -56,12 +56,37 @@
                         </a>
                     </div>
                     ';}
-                    mysqli_close($conn);
+                    
                    ?>
                 </div>
             </div>
             <div class="productslider">
                 <div class="slidercontent">
+                    <?php
+                    $sql = "SELECT nazwa,price,thumbnail,price_old,special_offer,product_url FROM produkty WHERE kategoria = 'Odzież';";
+                    $result = mysqli_query($conn,$sql);
+                    while($row = mysqli_fetch_array($result)) {               
+                    echo '
+                     <div class="productcard" onmouseover="lightUp(this)" onmouseout="lightDown(this)">
+                     <a href="item.php?product='.$row['product_url'].'">
+                         <img src="img/'.$row['thumbnail'].'" class="productimage">
+                         <div class="cardtext">
+                             <p class="cardprice">'.$row['price'].'$</p>';
+                             if($row['special_offer']==1) {
+                                 $discounted = round(100-($row['price']/$row['price_old'])*100);
+                                 echo '<p class="oldprice"><s>'.$row['price_old'].'</s>$ -'.$discounted.'%</p>';
+                             }
+                             else {echo'<br>';}
+                             echo '<p class="carddesc">'.$row['nazwa'].'</p>
+                         </div>
+                         </a>
+                     </div>
+                     ';}
+
+
+
+                    mysqli_close($conn);
+                    ?>
 
                 </div>
             </div>
