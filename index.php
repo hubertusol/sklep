@@ -31,7 +31,7 @@
 
         <main>
             <div class="banner">
-                <h1>Tutaj będą zachęcające promocje</h1>
+                <h1>Tutaj będą zachęcające promocje.</h1>
             </div>
             <div class="productslider">
                 <div class="slidercontent">
