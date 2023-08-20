@@ -17,7 +17,7 @@
             </div>
             <div class="searchspace">
                 <div class="vertcenter">
-                    <img src="img/search.png" class="icon">
+                    <a href="mesh.php?category=elektronika"><img src="img/search.png" class="icon"></a>
                     <input type="text">
                 </div>
             </div>
@@ -39,7 +39,7 @@
                    $conn= mysqli_connect("localhost:3306","root", "", "myshop");
                    $sql = "SELECT nazwa,price,thumbnail,price_old,special_offer,product_url FROM produkty  WHERE kategoria = 'elektronika';";
                    $result = mysqli_query($conn,$sql);
-                   while($row = mysqli_fetch_array($result)) {               
+                   while($row = mysqli_fetch_array($result)) {
                    echo '
                     <div class="productcard" onmouseover="lightUp(this)" onmouseout="lightDown(this)">
                     <a href="item.php?product='.$row['product_url'].'">

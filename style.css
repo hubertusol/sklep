@@ -141,4 +141,6 @@ nav {
     color: darkgrey;
     line-height: 50%;
   }
-  
+  .highlight:hover{
+    color: rgba(57,118,212,1);
+  }
