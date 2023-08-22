@@ -39,6 +39,7 @@
                    $conn= mysqli_connect("localhost:3306","root", "", "myshop");
                    $sql = "SELECT nazwa,price,thumbnail,price_old,special_offer,product_url FROM produkty  WHERE kategoria = 'elektronika';";
                    $result = mysqli_query($conn,$sql);
+                   $i=0;
                    while($row = mysqli_fetch_array($result)) {
                    echo '
                     <div class="productcard" onmouseover="lightUp(this)" onmouseout="lightDown(this)">
@@ -55,7 +56,10 @@
                         </div>
                         </a>
                     </div>
-                    ';}
+                    ';
+                $i++;
+                if ($i>4) {break;}
+                }
                     
                    ?>
                 </div>
